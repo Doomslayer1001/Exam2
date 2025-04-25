@@ -1,6 +1,6 @@
 import java.util.Objects;
 import java.util.ArrayList;
-
+import java.util.Collections;
 
 /**
  * Write a description of class Solution here.
@@ -12,7 +12,7 @@ public class Solution
 {
     // instance variables - replace the example below with your own
     private int x;
-    private ArrayList<Double> temperatures;
+    
     /**
      * Constructor for objects of class Solution
      */
@@ -32,7 +32,26 @@ public class Solution
         
         fever(temperatures);
     }
-
+    public void fever(ArrayList<Double> temperatures){
+        int count = 0;
+        double max = 0;
+        
+        for (Double temp : temperatures){
+            if (temp > 37.5){
+                count++;
+            }
+            if(temp > max){
+                max = temp;
+            }
+        }
+        //Q26 - using Collection.max
+        
+        System.out.println("Hight fever cases(Collections.max): " + Collections.max(temperatures));
+        
+        //Q27 - USING Collection.sort
+        Collections.sort(temperatures);
+        System.out.println("Hight fever cases;(Collections.sort) " + temperatures.getLast());
+        }
     /**
      * An example of a method - replace this comment with your own
      *
@@ -47,17 +66,14 @@ public class Solution
         String obj2 = "Oliver";
         String obj3 = "John";
         //(b) 
-        System.out.println(obj1.equals(obj2));
-        //c
-        System.out.println(obj1.equals(obj3));
-    
+        if (obj1.equals(obj2)){
+            System.out.println("String are the same");
+        }
+        else{
+            System.out.println("not the same");
+        }
     }
     //Q25
-    private void fever(ArrayList<Double> temperatures){
-        int count = 0;
-        double max = 0;
-        System.out.println("Nb of fever cases reported: " +count);
-        System.out.println("Hight fever cases; " +max);
-        }
+    
     }
 
