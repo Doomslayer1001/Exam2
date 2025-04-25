@@ -1,3 +1,6 @@
+import java.util.Objects;
+import java.util.ArrayList;
+
 
 /**
  * Write a description of class Solution here.
@@ -9,7 +12,7 @@ public class Solution
 {
     // instance variables - replace the example below with your own
     private int x;
-    
+    private ArrayList<Double> temperatures;
     /**
      * Constructor for objects of class Solution
      */
@@ -17,6 +20,17 @@ public class Solution
     {
         // initialise instance variables
         x = 0;
+        
+        ArrayList<Double> temperatures = new ArrayList<Double>();
+        
+        temperatures.add(33.5);
+        temperatures.add(35.5);
+        temperatures.add(40.5);
+        temperatures.add(31.5);
+        temperatures.add(45.5);
+        temperatures.add(46.5);
+        
+        fever(temperatures);
     }
 
     /**
@@ -25,31 +39,25 @@ public class Solution
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void sampleMethod()
+    public void equal()
     {
-        // Q24
-        //(a)
-        System.out.println("Oliver");
-        System.out.println("John");
-        //(b) //(c)
-        //if(System.out.println.equal){
-        //  System.out.println("equal");
-        
-        //else{
-           // System.out.println("not equal");
-        
-        
-    }
+        //Q24
+        // (a)
+        String obj1 = "Oliver";
+        String obj2 = "Oliver";
+        String obj3 = "John";
+        //(b) 
+        System.out.println(obj1.equals(obj2));
+        //c
+        System.out.println(obj1.equals(obj3));
     
+    }
     //Q25
-    private double temperature(){
-        //ArrayList<> = new temperature;
-        //temperature = ("33.5");
-        //temperature = ("35.5");
-        //temperature = ("40.5");
-        //for (temperature < 37.5){
-        //System.out.println("max temp")
-        return 0;
+    private void fever(ArrayList<Double> temperatures){
+        int count = 0;
+        double max = 0;
+        System.out.println("Nb of fever cases reported: " +count);
+        System.out.println("Hight fever cases; " +max);
         }
     }
 
